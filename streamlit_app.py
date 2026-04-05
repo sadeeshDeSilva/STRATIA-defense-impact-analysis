@@ -466,7 +466,7 @@ def login_page():
     <div class="stratia-topbar">
         <div class="brand-wrap">{logo_html}
             <div><div class="brand-title">STRATIA</div>
-                 <div class="brand-sub">Strategic Forecasting Interface</div></div>
+                 <div class="brand-sub">Strategic Forecasting</div></div>
         </div>
         <div class="admin-pill">Secure Access</div>
     </div>""", unsafe_allow_html=True)
@@ -474,21 +474,19 @@ def login_page():
     left, right = st.columns([1.2, 1], gap="large")
     with left:
         st.markdown("""
-        <div class="section-card" style="min-height:420px;display:flex;flex-direction:column;justify-content:center;">
+        <div class="section-card" style="min-height:350px;display:flex;flex-direction:column;justify-content:center;">
             <div class="micro-label">Defense · Macro · Geopolitics</div>
-            <div class="hero-title">Strategic intelligence with a cleaner operating surface.</div>
             <div class="hero-sub">STRATIA combines forecasting models, comparative geopolitical context,
                 and an intelligence assistant into one decision-support interface.</div>
             <div class="badge-grid">
                 <div class="mini-stat"><div class="k">Domains</div><div class="v">5 Forecast Areas</div></div>
                 <div class="mini-stat"><div class="k">Models</div><div class="v">LSTM · RF · XGBoost · ARIMA</div></div>
-                <div class="mini-stat"><div class="k">Mode</div><div class="v">Analyst Console</div></div>
             </div>
         </div>""", unsafe_allow_html=True)
     with right:
         st.markdown('<div class="micro-label">Authentication</div>', unsafe_allow_html=True)
         st.markdown('<div style="font-size:1.4rem;font-weight:800;margin-bottom:8px;">Enter the platform</div>', unsafe_allow_html=True)
-        st.markdown('<div class="subtle-note" style="margin-bottom:18px;">Use the demo credentials to access the forecasting dashboard.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="subtle-note" style="margin-bottom:18px;">Use the credentials to access the forecasting dashboard.</div>', unsafe_allow_html=True)
         username = st.text_input("Username", placeholder="admin")
         password = st.text_input("Password", type="password", placeholder="••••••••••")
         if st.button("Authenticate", use_container_width=True):
@@ -751,7 +749,7 @@ def intelligence_page():
     else:
         st.markdown("""
         <div class="context-banner" style="border-color:rgba(255,255,255,0.08);background:rgba(255,255,255,0.02);">
-            <div class="subtle-note">No active prediction yet — or ask directly in the chat below.</div>
+            <div class="subtle-note">No active prediction yet — or ask directly in the chat.</div>
         </div>""", unsafe_allow_html=True)
 
     # ── Side-by-Side Layout ──────────────────────────────
